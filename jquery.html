@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery study</title>
+    <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.js"></script>
+    <style>
+        div{
+            width:100px;
+            height: 100px;
+            /*float: left;*/
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+<span color="red">红</span> <span color="green">绿</span> <span color="yellow">黄</span> <span color="black">黑</span>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<script>
+    var color;
+    $('body').on('click','span',function(){
+        color = $(this).attr('color');
+    });
+    $('body').on('click','div',function(){
+        $(this).css('background',color);
+    });
+</script>
+</body>
+</html>
